@@ -7,11 +7,12 @@ public class Alter : MonoBehaviour
     [SerializeField] GameObject panel;
     [SerializeField] GameObject rightArm;
     [SerializeField] GameObject leftArm;
+    public bool hasRemovedLimb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        hasRemovedLimb = false;
     }
 
     // Update is called once per frame
@@ -19,12 +20,11 @@ public class Alter : MonoBehaviour
     {
         
     }
-
-
   
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+
+        if (other.gameObject.tag == "Player" && !hasRemovedLimb)
         {
             panel.SetActive(true);
         }
@@ -42,11 +42,15 @@ public class Alter : MonoBehaviour
     public void RightArm()
     {
         rightArm.transform.localScale = new Vector3(0, 0, 0);
+        hasRemovedLimb = true;
+        panel.SetActive(false);
     }
 
     public void LeftArm()
     {
+        hasRemovedLimb = true;
         leftArm.transform.localScale = new Vector3(0, 0, 0);
+        panel.SetActive(false);
     }
 
 }
