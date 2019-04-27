@@ -7,19 +7,23 @@ public class Health : MonoBehaviour
 {
     [SerializeField] Image healthBar;
     [SerializeField] float totalHealth = 100f;
-    [SerializeField] float health;
+    [SerializeField] float healths;
+
+    public float Healths { get => healths; set => healths = value; }
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         healthBar = GetComponent<Image>();
-        health = totalHealth;
+        healths = totalHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthBar.fillAmount = health / totalHealth;
+        healthBar.fillAmount = healths / totalHealth;
     }
 }
