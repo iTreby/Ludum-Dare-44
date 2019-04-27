@@ -7,6 +7,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 {
     public class Alter : MonoBehaviour
     {
+        [SerializeField] GameObject rightButton;
+        [SerializeField] GameObject leftButton;
         [SerializeField] ThirdPersonCharacter speed;
         [SerializeField] GameObject panel;
         [SerializeField] GameObject[] limb;
@@ -51,6 +53,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             limb[0].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
             health.Healths -= 10f;
+            rightButton.SetActive(false);
             this.enabled = false;
         }
 
@@ -60,6 +63,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             limb[1].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
             health.Healths -= 10f;
+            leftButton.SetActive(false);
             this.enabled = false;
         }
 
