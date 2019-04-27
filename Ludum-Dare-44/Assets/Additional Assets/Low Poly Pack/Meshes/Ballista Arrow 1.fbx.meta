@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 46a6e26df90158b4a9acc3b43f71e108
+guid: 3560cd416607eb44e9dc000c3c6267c2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,12 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Ballista_Arrow_1
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TowerHutBallista
-    second: {fileID: 2100000, guid: 50df01dd7003c404fb38a44140d6bc21, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
