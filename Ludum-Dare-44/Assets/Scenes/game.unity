@@ -6071,6 +6071,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7893011673495710953, guid: 46b519dc2eaf0774dad43648357942d0,
+        type: 3}
+      propertyPath: m_MovingTurnSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893011673495710953, guid: 46b519dc2eaf0774dad43648357942d0,
+        type: 3}
+      propertyPath: m_StationaryTurnSpeed
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893011673495710953, guid: 46b519dc2eaf0774dad43648357942d0,
+        type: 3}
+      propertyPath: m_AnimSpeedMultiplier
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893011673495710953, guid: 46b519dc2eaf0774dad43648357942d0,
+        type: 3}
+      propertyPath: m_MoveSpeedMultiplier
+      value: 1.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46b519dc2eaf0774dad43648357942d0, type: 3}
 --- !u!4 &1471541731 stripped
@@ -9038,6 +9058,14 @@ PrefabInstance:
       propertyPath: m_Target
       value: 
       objectReference: {fileID: 1471541731}
+    - target: {fileID: 11400000, guid: baec086904791744185aaa07a6cf55c2, type: 3}
+      propertyPath: m_MoveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: baec086904791744185aaa07a6cf55c2, type: 3}
+      propertyPath: m_TurnSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baec086904791744185aaa07a6cf55c2, type: 3}
 --- !u!1001 &2109494857
