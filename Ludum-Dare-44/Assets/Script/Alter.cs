@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Alter : MonoBehaviour
 {
     [SerializeField] GameObject panel;
     [SerializeField] GameObject rightArm;
     [SerializeField] GameObject leftArm;
+    [SerializeField] Health health;
+    [SerializeField] GameObject healthImage;
     public bool hasRemovedLimb;
 
     // Start is called before the first frame update
@@ -26,6 +29,7 @@ public class Alter : MonoBehaviour
 
         if (other.gameObject.tag == "Player" && !hasRemovedLimb)
         {
+            healthImage.SetActive(false);
             panel.SetActive(true);
         }
     }
@@ -34,6 +38,7 @@ public class Alter : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            healthImage.SetActive(true);
             panel.SetActive(false);
         }
     }
@@ -44,6 +49,8 @@ public class Alter : MonoBehaviour
         rightArm.transform.localScale = new Vector3(0, 0, 0);
         hasRemovedLimb = true;
         panel.SetActive(false);
+        health.Healths -= 10f;
+        
     }
 
     public void LeftArm()
@@ -51,6 +58,7 @@ public class Alter : MonoBehaviour
         hasRemovedLimb = true;
         leftArm.transform.localScale = new Vector3(0, 0, 0);
         panel.SetActive(false);
+        health.Healths -= 10f;
     }
 
 }
