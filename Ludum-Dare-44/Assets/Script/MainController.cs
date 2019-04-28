@@ -38,16 +38,25 @@ public class MainController : MonoBehaviour
         }
     }
 
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.gameObject.tag == "enemy")
+    //    {
+    //        health.Healths -= 2;
+    //    }
+    //}
+
+
 
     IEnumerator Default()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         anime.SetBool("Swing", false);
     }
 
     IEnumerator Idle()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         anime.SetBool("Shield", false);
     }
 
