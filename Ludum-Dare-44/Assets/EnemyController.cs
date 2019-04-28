@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] float lookRadius = 8f;
+    [SerializeField] int hp = 100;
 
     Transform target;
     NavMeshAgent agent;
@@ -30,6 +31,11 @@ public class EnemyController : MonoBehaviour
                 FaceTarget();
             }
         }
+
+        if(hp > 0)
+        {
+            gameObject.SetActive(true);
+        }
     }
 
     void FaceTarget()
@@ -44,4 +50,15 @@ public class EnemyController : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Sword")
+        {
+            hp -= 10;
+        }
+    }
+
+
+
 }

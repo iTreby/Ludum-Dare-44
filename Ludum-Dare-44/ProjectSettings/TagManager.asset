@@ -7,6 +7,7 @@ TagManager:
   - Fire
   - Sword
   - Shield
+  - enemy
   layers:
   - Default
   - TransparentFX

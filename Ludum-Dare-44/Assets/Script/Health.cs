@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     [SerializeField] Image healthBar;
     [SerializeField] float totalHealth = 100f;
     [SerializeField] float healths;
+    [SerializeField] GameObject gameOver;
 
     public float Healths { get => healths; set => healths = value; }
 
@@ -25,5 +26,10 @@ public class Health : MonoBehaviour
     void Update()
     {
         healthBar.fillAmount = healths / totalHealth;
+
+        if(healthBar.fillAmount <= 0)
+        {
+            gameObject.SetActive(true);
+        }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainController : MonoBehaviour
 {
     [SerializeField] Animator anime;
+    [SerializeField] Health health;
 
 
     // Start is called before the first frame update
@@ -28,6 +29,15 @@ public class MainController : MonoBehaviour
             StartCoroutine("Idle");
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "enemy")
+        {
+            health.Healths -= 10;
+        }
+    }
+
 
     IEnumerator Default()
     {
