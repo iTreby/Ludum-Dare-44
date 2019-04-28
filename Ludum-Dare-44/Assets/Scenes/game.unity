@@ -1175,6 +1175,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 648644869}
+    - target: {fileID: 4004827865199594364, guid: b981f25435512584aa60bd479268ee95,
+        type: 3}
+      propertyPath: countLimbs
+      value: 
+      objectReference: {fileID: 1390001368}
     - target: {fileID: 7645533863461533913, guid: b981f25435512584aa60bd479268ee95,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -33419,6 +33424,12 @@ CapsuleCollider:
   m_Height: 8.425228
   m_Direction: 1
   m_Center: {x: 0.00000059604645, y: -0.00000023841858, z: 0.0000009536743}
+--- !u!1 &1008755735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5675941268115737233, guid: 423b140bf3f22654eaaafb04ad489408,
+    type: 3}
+  m_PrefabInstance: {fileID: 1071224580}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1011087494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34796,7 +34807,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6741436962531756555}
+      objectReference: {fileID: 1532619357}
     - target: {fileID: 5675941268174464405, guid: 423b140bf3f22654eaaafb04ad489408,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -34806,7 +34817,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6741436962531756555}
+      objectReference: {fileID: 1532619357}
     - target: {fileID: 5675941268115737235, guid: 423b140bf3f22654eaaafb04ad489408,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -53697,6 +53708,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22da9853bb9ef04ba27f06c99a80716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arms: {fileID: 0}
+  rightButton: {fileID: 1008755735}
+  leftButton: {fileID: 1683845638}
+  countLimbs: {fileID: 1390001368}
   panel: {fileID: 1040927909}
   limb:
   - {fileID: 983682412}
@@ -58472,6 +58487,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: bec0860923b591f448a07a52efa7912a, type: 3}
+--- !u!1 &1683845638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5675941268174464411, guid: 423b140bf3f22654eaaafb04ad489408,
+    type: 3}
+  m_PrefabInstance: {fileID: 1071224580}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1686164275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71424,6 +71445,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1313859211}
+    - target: {fileID: 4004827865199594364, guid: b981f25435512584aa60bd479268ee95,
+        type: 3}
+      propertyPath: countLimbs
+      value: 
+      objectReference: {fileID: 1390001368}
     - target: {fileID: 7645533863461533913, guid: b981f25435512584aa60bd479268ee95,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -76650,5 +76676,15 @@ PrefabInstance:
       propertyPath: speed
       value: 
       objectReference: {fileID: 983682414}
+    - target: {fileID: 4004827865199594364, guid: b981f25435512584aa60bd479268ee95,
+        type: 3}
+      propertyPath: countLimbs
+      value: 
+      objectReference: {fileID: 1390001368}
+    - target: {fileID: 4004827865199594364, guid: b981f25435512584aa60bd479268ee95,
+        type: 3}
+      propertyPath: arms
+      value: 
+      objectReference: {fileID: 1390001368}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b981f25435512584aa60bd479268ee95, type: 3}

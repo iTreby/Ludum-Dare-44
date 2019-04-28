@@ -7,6 +7,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 {
     public class Alter : MonoBehaviour
     {
+       
         [SerializeField] GameObject rightButton;
         [SerializeField] GameObject leftButton;
         [SerializeField] ThirdPersonCharacter speed;
@@ -14,6 +15,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         [SerializeField] GameObject[] limb;
         [SerializeField] Health health;
         [SerializeField] GameObject healthImage;
+        [SerializeField] MainController countLimbs;
 
         [SerializeField] Animator animator;
         public bool hasRemovedLimb;
@@ -51,53 +53,60 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         public void RemoveRight()
         {
+            countLimbs.rightArmGone = true;
             hasRemovedLimb = true;
-            limb[0].transform.localScale = new Vector3(0, 0, 0);
+            countLimbs.limbsGone++;
+            limb[1].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
             health.Healths -= 10f;
             rightButton.SetActive(false);
-            this.enabled = false;
+            
         }
 
         public void RemoveLeft()
         {
+            countLimbs.leftArmGone = true;
             hasRemovedLimb = true;
-            limb[1].transform.localScale = new Vector3(0, 0, 0);
+            countLimbs.limbsGone++;
+            limb[0].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
             health.Healths -= 10f;
             animator.SetBool("isUsed", true);
             leftButton.SetActive(false);
-            this.enabled = false;
+           
             
         }
 
         public void RemoveLeftLeg()
         {
             hasRemovedLimb = true;
+            countLimbs.limbsGone++;
             limb[0].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
             speed.MoveSpeedMultiplier = 0.5f;
             health.Healths -= 10f;
-            this.enabled = false;
+           
         }
 
         public void RemoveRightLeg()
         {
             hasRemovedLimb = true;
+            countLimbs.limbsGone++;
             limb[1].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
             speed.MoveSpeedMultiplier = 0.5f;
             health.Healths -= 10f;
-            this.enabled = false;
+           
         }
 
         public void RemoveHead()
         {
             hasRemovedLimb = true;
+            countLimbs.limbsGone++;
             limb[0].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
             health.Healths -= 40f;
-            this.enabled = false;
+          
         }
 
 

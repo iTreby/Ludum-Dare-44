@@ -7,6 +7,8 @@ public class MainController : MonoBehaviour
     [SerializeField] Animator anime;
     [SerializeField] Health health;
     public int limbsGone = 0;
+    public bool leftArmGone , rightArmGone = false;
+    
 
 
     // Start is called before the first frame update
@@ -18,13 +20,13 @@ public class MainController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !rightArmGone)
         {
             anime.SetBool("Swing", true);
             StartCoroutine("Default");
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !leftArmGone)
         {
             anime.SetBool("Shield", true);
             StartCoroutine("Idle");
