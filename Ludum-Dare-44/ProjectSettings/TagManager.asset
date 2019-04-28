@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - Sword
+  - Shield
   layers:
   - Default
   - TransparentFX
