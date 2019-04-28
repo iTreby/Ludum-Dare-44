@@ -90,6 +90,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             health.Healths -= 10f;
             this.enabled = false;
         }
+
+        public void RemoveHead()
+        {
+            hasRemovedLimb = true;
+            limb[0].transform.localScale = new Vector3(0, 0, 0);
+            panel.SetActive(false);
+            health.Healths -= 40f;
+            this.enabled = false;
+        }
+
+
     }
 
 }
