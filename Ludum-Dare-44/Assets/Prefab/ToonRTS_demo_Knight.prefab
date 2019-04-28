@@ -318,9 +318,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1058878922860030101}
+  - component: {fileID: 1217313015}
   m_Layer: 0
   m_Name: Bip001 L Hand
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -339,6 +340,19 @@ Transform:
   m_Father: {fileID: 1058878922860030091}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1217313015
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058878922860524725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.33746114
+  m_Center: {x: -0.19700402, y: 0.0031415222, z: 0.08999997}
 --- !u!1 &1058878922860524727
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,9 +550,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1058878922860030115}
+  - component: {fileID: 1217312897}
   m_Layer: 0
   m_Name: Bip001 R Hand
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -557,6 +572,19 @@ Transform:
   m_Father: {fileID: 1058878922860030113}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1217312897
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058878922860524739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21582562, y: 0.030591227, z: 0.7836382}
+  m_Center: {x: -0.10264955, y: 0.04, z: 0.57172376}
 --- !u!1 &1058878922860524741
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,6 +915,7 @@ GameObject:
   - component: {fileID: 1058878922860425737}
   - component: {fileID: 1058878922860425739}
   - component: {fileID: 1058878922860425738}
+  - component: {fileID: 1217312917}
   m_Layer: 0
   m_Name: ToonRTS_demo_Knight
   m_TagString: Untagged
@@ -991,3 +1020,16 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.5
+--- !u!114 &1217312917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058878922860524759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33538832fe3d7440ad768eb4a8a4c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anime: {fileID: 1058878922867771237}
