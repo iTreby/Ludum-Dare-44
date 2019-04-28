@@ -6,6 +6,7 @@ public class MainController : MonoBehaviour
 {
     [SerializeField] Animator anime;
     [SerializeField] Health health;
+    public int limbsGone = 0;
 
 
     // Start is called before the first frame update
