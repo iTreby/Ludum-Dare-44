@@ -14,6 +14,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         [SerializeField] GameObject[] limb;
         [SerializeField] Health health;
         [SerializeField] GameObject healthImage;
+
+        [SerializeField] Animator animator;
         public bool hasRemovedLimb;
 
         // Start is called before the first frame update
@@ -63,8 +65,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             limb[1].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
             health.Healths -= 10f;
+            animator.SetBool("isUsed", true);
             leftButton.SetActive(false);
             this.enabled = false;
+            
         }
 
         public void RemoveLeftLeg()
