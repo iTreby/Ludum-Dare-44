@@ -6,9 +6,10 @@ public class MainController : MonoBehaviour
 {
     [SerializeField] Animator anime;
     [SerializeField] Health health;
+    [SerializeField] Transform next;
     public int limbsGone = 0;
     public bool leftArmGone , rightArmGone = false;
-    
+    public bool positionSwitch = false;
 
 
     // Start is called before the first frame update
@@ -30,6 +31,12 @@ public class MainController : MonoBehaviour
         {
             anime.SetBool("Shield", true);
             StartCoroutine("Idle");
+        }
+        if (positionSwitch)
+        {
+            transform.position = next.position;
+            positionSwitch = false;
+            //transform.rotation = next.rotation;
         }
     }
 
