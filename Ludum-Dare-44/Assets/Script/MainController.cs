@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +8,11 @@ public class MainController : MonoBehaviour
     [SerializeField] Animator anime;
     [SerializeField] Health health;
     [SerializeField] Transform next;
+    [SerializeField] GameObject gameOver;
     public int limbsGone = 0;
     public bool leftArmGone , rightArmGone = false;
     public bool positionSwitch = false;
+    public bool isDead , deadTest = false;
 
 
     // Start is called before the first frame update
@@ -38,6 +41,16 @@ public class MainController : MonoBehaviour
             positionSwitch = false;
             //transform.rotation = next.rotation;
         }
+        if (isDead && !deadTest)
+        {
+            deadTest = true;
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)

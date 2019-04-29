@@ -32420,6 +32420,10 @@ PrefabInstance:
       propertyPath: next
       value: 
       objectReference: {fileID: 1916888175}
+    - target: {fileID: 1217312917, guid: 86d4cdd5dc9fb4a4e8763f58a7f13d75, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 1457256523}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86d4cdd5dc9fb4a4e8763f58a7f13d75, type: 3}
 --- !u!1 &983682412 stripped
@@ -59890,7 +59894,7 @@ PrefabInstance:
     - target: {fileID: 2077441867683948324, guid: 6687966e990fe7c43985f16ce35a788b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.03
+      value: 9.29
       objectReference: {fileID: 0}
     - target: {fileID: 2077441867683948324, guid: 6687966e990fe7c43985f16ce35a788b,
         type: 3}
