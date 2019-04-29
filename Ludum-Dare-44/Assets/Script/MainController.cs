@@ -41,23 +41,20 @@ public class MainController : MonoBehaviour
             positionSwitch = false;
             //transform.rotation = next.rotation;
         }
-        if (isDead && !deadTest)
+        if (health.check && !deadTest)
         {
-            deadTest = true;
-            GameOver();
+            gameOver.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
-    private void GameOver()
-    {
-        gameObject.SetActive(true);
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "enemy")
         {
-            health.Healths -= 10;
+            health.Healths -= 10;         
         }
     }
 

@@ -27,6 +27,10 @@ public class Health : MonoBehaviour
     void Update()
     {
         healthBar.fillAmount = healths / totalHealth;
+        if(healthBar.fillAmount <= 0f && !check)
+        {
+            check = true;
+        }
     }
     
 }
