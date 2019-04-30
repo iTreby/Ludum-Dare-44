@@ -53,7 +53,7 @@ public class SecondArmLaltar : MonoBehaviour
         limb[0].transform.localScale = new Vector3(0, 0, 0);
         panel.SetActive(false);
         rightButton.SetActive(false);
-        health.Healths -= 10f;
+        //health.Healths -= 10f;
         this.enabled = false;
     }
 
@@ -65,7 +65,7 @@ public class SecondArmLaltar : MonoBehaviour
         limb[1].transform.localScale = new Vector3(0, 0, 0);
         panel.SetActive(false);
         leftButton.SetActive(false);
-        health.Healths -= 10f;   
+        //health.Healths -= 10f;   
         this.enabled = false;
     }
 

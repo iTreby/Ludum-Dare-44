@@ -31,4 +31,12 @@ public class TeleportBack : MonoBehaviour
             stageClear = true;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            stageClear = false;
+        }
+    }
 }

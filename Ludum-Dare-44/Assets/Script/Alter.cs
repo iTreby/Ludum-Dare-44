@@ -58,7 +58,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             countLimbs.limbsGone++;
             limb[1].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
-            health.Healths -= 10f;
+         //   health.Healths -= 10f;
             rightButton.SetActive(false);
             
         }
@@ -70,7 +70,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             countLimbs.limbsGone++;
             limb[0].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
-            health.Healths -= 10f;
+          //  health.Healths -= 10f;
             animator.SetBool("isUsed", true);
             leftButton.SetActive(false);
            
@@ -84,7 +84,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             limb[0].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
             speed.MoveSpeedMultiplier = 0.5f;
-            health.Healths -= 10f;
+           // health.Healths -= 10f;
            
         }
 
@@ -95,7 +95,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             limb[1].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
             speed.MoveSpeedMultiplier = 0.5f;
-            health.Healths -= 10f;
+           // health.Healths -= 10f;
            
         }
 
@@ -105,7 +105,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             countLimbs.limbsGone++;
             limb[0].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
-            health.Healths -= 20f;
+           // health.Healths -= 20f;
           
         }
 

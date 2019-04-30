@@ -61,7 +61,7 @@ public class MainController : MonoBehaviour
     {
         if(other.gameObject.tag == "enemy")
         {
-            health.Healths -= 5;         
+            health.Healths -= 2;         
         }
     }
 
