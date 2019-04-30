@@ -71944,7 +71944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406627c8ce1e84c419f51e77915adedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportPoint: {fileID: 0}
+  teleportPoint: {fileID: 695914677}
   countLimbs: {fileID: 1390001368}
   stageClear: 0
 --- !u!135 &1908802948
