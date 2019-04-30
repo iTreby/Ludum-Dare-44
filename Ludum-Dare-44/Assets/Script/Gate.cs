@@ -18,7 +18,7 @@ public class Gate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(countLimbs.limbsGone == 1 && playerPresent)
+        if(countLimbs.limbsGone >= 1 && playerPresent)
         {
             gateAnime.SetBool("GateDown", true);
         }
