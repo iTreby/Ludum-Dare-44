@@ -8,10 +8,11 @@ public class MainController : MonoBehaviour
     [SerializeField] Animator anime;
     [SerializeField] Health health;
     [SerializeField] Transform next;
+    [SerializeField] Transform finalNext;
     [SerializeField] GameObject gameOver;
     public int limbsGone = 0;
     public bool leftArmGone , rightArmGone = false;
-    public bool positionSwitch = false;
+    public bool positionSwitch , finalSwitch = false;
     public bool isDead , deadTest = false;
 
 
@@ -41,6 +42,12 @@ public class MainController : MonoBehaviour
             positionSwitch = false;
             //transform.rotation = next.rotation;
         }
+        if (finalSwitch)
+        {
+            transform.position = finalNext.position;
+            finalSwitch = false;
+        }
+
         if (health.check && !deadTest)
         {
             gameOver.SetActive(true);
@@ -54,7 +61,7 @@ public class MainController : MonoBehaviour
     {
         if(other.gameObject.tag == "enemy")
         {
-            health.Healths -= 10;         
+            health.Healths -= 5;         
         }
     }
 

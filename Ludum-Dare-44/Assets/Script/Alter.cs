@@ -105,7 +105,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             countLimbs.limbsGone++;
             limb[0].transform.localScale = new Vector3(0, 0, 0);
             panel.SetActive(false);
-            health.Healths -= 40f;
+            health.Healths -= 20f;
           
         }
 

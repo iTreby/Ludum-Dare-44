@@ -32,9 +32,9 @@ public class EnemyController : MonoBehaviour
             }
         }
 
-        if(hp > 0)
+        if(hp <= 0f)
         {
-            gameObject.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 
@@ -55,11 +55,11 @@ public class EnemyController : MonoBehaviour
     {
         if(other.gameObject.tag == "Sword")
         {
-            hp -= 10;
+            hp -= 34;
         }
     }
 
-
+    
 
 
 

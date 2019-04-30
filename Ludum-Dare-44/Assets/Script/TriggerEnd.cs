@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class TriggerEnd : MonoBehaviour
 {
-    GameObject endPanel;
-    GameObject UIPanel;
+    [SerializeField] GameObject endPanel;
+    [SerializeField] GameObject UIPanel;
 
     public void Awake()
     {
-        endPanel.setActive(false);
+        endPanel.SetActive(false);
     }
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameobject.tag == "Player")
+        if (col.gameObject.tag == "Player")
         {
-            endPanel.setActive(true);
-            UIPanel.setActive(false);
+            endPanel.SetActive(true);
+            UIPanel.SetActive(false);
         }
     }
 
